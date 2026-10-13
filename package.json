@@ -1,5 +1,8 @@
 {
-  "description": "GhostGuard distribution plays \u2014 local deliverables (GitHub Action gate, red-team bench, plain-English policy author, approval channels, browser Lite). Nothing published; all suites run against the real GhostGuard engine in ~/workspace/ghostguard/dist (imported read-only). By Ghost Developer Studio.",
+  "description": "GhostGuard distribution plays \u2014 local deliverables (GitHub Action gate, red-team bench, plain-English policy author, approval channels, browser Lite). Nothing published; all suites run against the real GhostGuard engine from the published ghostguard package. By Ghost Developer Studio.",
+  "dependencies": {
+    "ghostguard": "^0.1.0"
+  },
   "engines": {
     "node": ">=18.0.0"
   },

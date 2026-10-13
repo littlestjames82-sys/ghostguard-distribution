@@ -1,8 +1,8 @@
 # GhostGuard Distribution
 
 Five standalone plays that take GhostGuard to where agents already
-run. Built Oct 10, 2026 and public at v0.1.0 — zero runtime
-dependencies, Node ≥ 18, ESM.
+run. Built Oct 10, 2026 and public at v0.1.0 — one runtime
+dependency (the published `ghostguard` core package), Node ≥ 18, ESM.
 
 Every suite runs against the **real** GhostGuard engine, imported
 read-only from the sibling core checkout's built `dist/` (see the
@@ -26,17 +26,13 @@ subfolder's `README.md` for its own details.
 
 ## Repository layout note
 
-This add-on imports the GhostGuard core engine from a **sibling checkout**:
-`../../ghostguard/dist/index.js` (its source and/or tests do; nothing in the
-core is modified). To run it, clone the core next to this repo so both folders
-share a parent directory:
+This add-on imports the GhostGuard core engine from the **published
+`ghostguard` package** (`"ghostguard": "^0.1.0"` in `package.json`; nothing
+in the core is modified). To run it, clone this repo and install:
 
 ```sh
-git clone https://github.com/littlestjames82-sys/ghostguard
 git clone https://github.com/littlestjames82-sys/ghostguard-distribution
-# build the core once so dist/ exists:
-cd ghostguard && npm run build && cd ..
-cd ghostguard-distribution && npm test
+cd ghostguard-distribution && npm install && npm test
 ```
 
 Part of the GhostGuard family by **Ghost Developer Studio**.

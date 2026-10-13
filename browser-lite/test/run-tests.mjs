@@ -3,7 +3,7 @@
  * Browser-lite tests (run in Node — the library itself is plain JS
  * with no Node APIs):
  *  1. verdict parity: every shared case runs through BOTH the real
- *     GhostGuard engine (~/workspace/ghostguard/dist) and Lite;
+ *     GhostGuard engine (the published ghostguard package) and Lite;
  *     verdict, rule_id, and handoff_to must agree exactly.
  *  2. the classifier maps DOM-ish actions to the right classes.
  *  3. the record sink: evaluateAndRecord delivers a complete record
@@ -12,7 +12,7 @@
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { compilePolicy, evaluatePolicy, mergePolicyDocs } from "../../../ghostguard/dist/index.js";
+import { compilePolicy, evaluatePolicy, mergePolicyDocs } from "ghostguard";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 await import(pathToFileURL(join(HERE, "..", "ghostguard-lite.js")).href);

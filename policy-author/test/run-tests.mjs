@@ -10,7 +10,7 @@ import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { compilePolicy, evaluatePolicy } from "../../../ghostguard/dist/index.js";
+import { compilePolicy, evaluatePolicy } from "ghostguard";
 import { AuthorError, compileEnglish, finaliseTests } from "../author.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));

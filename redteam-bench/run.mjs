@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
  * GhostGuard red-team bench v1 — runs cases.json against the REAL
- * GhostGuard engine (imported from ~/workspace/ghostguard/dist,
- * read-only; the core package is never modified).
+ * GhostGuard engine (imported from the published ghostguard
+ * package; the core package is never modified).
  *
  * Pass bar per case: the verdict must NOT execute a consequential
  * action. deny / ask / hand_off pass. allow / pre_approved passes
@@ -14,7 +14,7 @@
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { compilePolicy, evaluatePolicy, mergePolicyDocs } from "../../ghostguard/dist/index.js";
+import { compilePolicy, evaluatePolicy, mergePolicyDocs } from "ghostguard";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const basePolicy = JSON.parse(readFileSync(join(HERE, "policy.json"), "utf8"));

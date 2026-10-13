@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 /**
  * Runs a generated behavior-tests.json against a policy.json using
- * the REAL GhostGuard engine (~/workspace/ghostguard/dist, imported
- * read-only).
+ * the REAL GhostGuard engine (the published ghostguard package).
  *
  * Usage: node run-behavior-tests.mjs <policy.json> <behavior-tests.json>
  */
 import { readFileSync } from "node:fs";
-import { compilePolicy, evaluatePolicy } from "../../ghostguard/dist/index.js";
+import { compilePolicy, evaluatePolicy } from "ghostguard";
 
 const [policyPath, testsPath] = process.argv.slice(2);
 if (!policyPath || !testsPath) {

@@ -36,7 +36,7 @@ verdict / rule_id / handoff_to.
 
 ## Honest limits
 Lite re-implements the semantics in miniature — the real engine in
-`~/workspace/ghostguard` is canonical. Parity is proven on the
+the published `ghostguard` package is canonical. Parity is proven on the
 shared fixture set, not on every possible policy; exotic
 expressions outside the documented subset can diverge, and a
 browser page is not a trust boundary (an agent that controls the

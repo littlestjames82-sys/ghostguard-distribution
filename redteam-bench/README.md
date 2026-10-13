@@ -1,7 +1,7 @@
 # GhostGuard Red-Team Bench — corpus v1
 
 Attack-shaped actions run against the **real** GhostGuard engine
-(`~/workspace/ghostguard/dist`, imported read-only). The bench asks
+(the published `ghostguard` package). The bench asks
 one question per case: *would this attack get a consequential
 action executed?*
 

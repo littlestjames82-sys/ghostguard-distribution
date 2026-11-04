@@ -1,4 +1,5 @@
 # GhostGuard Distribution
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Release](https://img.shields.io/github/v/release/littlestjames82-sys/ghostguard-distribution)](https://github.com/littlestjames82-sys/ghostguard-distribution/releases)
 
 Five standalone plays that take GhostGuard to where agents already
 run. Built Oct 10, 2026 and public at v0.1.0 — one runtime
